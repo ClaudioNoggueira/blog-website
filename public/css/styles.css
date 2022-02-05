@@ -17,6 +17,10 @@
     color: #1abc9c !important;
 }
 
+.navbar-nav li a::after {
+    color: #1abc9c !important;
+}
+
 .footer-padding {
     padding-bottom: 60px;
 }
