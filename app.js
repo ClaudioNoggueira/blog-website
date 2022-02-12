@@ -50,13 +50,13 @@ app.get('/compose', function (request, response) {
 });
 
 app.post('/compose', function (request, response) {
-  const post = {
-    postTitle: request.body.postTitle,
+  const post = new Post({
+    postTitle: _.capitalize(request.body.postTitle),
     postContent: request.body.postContent
-  };
+  });
 
-  posts.push(post);
-  response.redirect('/');
+  post.save();
+  response.redirect('/home');
 });
 
 
